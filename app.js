@@ -17,6 +17,12 @@ app.use( (req, res, next) => {
   next();
 })
 
+
+app.get('/api/test', (req, res, next) => {
+    res.status(200).send("Message received");
+  })
+  
+
 app.post('/api/send_email', (req, res, next) => {
   const { name, email, phone, serviceRequested, prefferedTime, notesOrQuestions } = req.body;
   var transporter = nodemailer.createTransport({
