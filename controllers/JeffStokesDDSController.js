@@ -1,3 +1,6 @@
+
+const nodemailer = require('nodemailer');
+
 module.exports = {
     SendEmail: (req, res, next) => {
         const { name, email, phone, serviceRequested, prefferedTime, notesOrQuestions } = req.body;
