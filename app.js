@@ -24,6 +24,7 @@ app.get('/api/test', (req, res, next) => {
   
 
 app.post('/api/send_email', (req, res, next) => {
+    debugger
   const { name, email, phone, serviceRequested, prefferedTime, notesOrQuestions } = req.body;
   var transporter = nodemailer.createTransport({
     service: 'gmail',
